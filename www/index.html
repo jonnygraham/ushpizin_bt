@@ -1,0 +1,48 @@
+<!DOCTYPE html> 
+<html style="height:100%">
+	<head> 
+		<title>Ushpizin Controller</title> 
+		<meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no"> 
+		<script src="phonegap.js"></script>
+		<script src="jquery-1.9.1.min.js"></script>
+		<script src="ushpizin.js"/></script>
+	</head>
+	<body>
+		<button onclick="connect()">Connect</button><span id="connState">Click to connect</span>
+
+	<br/>
+	<br/>
+	<form id="controls">
+			<input type="radio" name="person" value="1" checked>Avraham
+			<br/>
+			<input type="radio" name="person" value="2">Yitzchak<br/>
+			<input type="radio" name="person" value="3">Yaakov<br/>
+			<input type="radio" name="person" value="4">Moshe<br/>
+			<input type="radio" name="person" value="5">Aharon<br/>
+			<input type="radio" name="person" value="6">Yosef<br/>
+			<input type="radio" name="person" value="7">David<br/>
+		
+		<br/>
+		<input type="radio" name="borderType" value="1" checked>On
+		<br/>
+		<input type="radio" name="borderType" value="0">Off
+		<br/>
+		<input type="radio" name="borderType" value="2">Flash
+		<br/>
+		
+		<input type="range" name="borderOnTime" min="0" max="99"/>Flash - on for
+		<br/>
+		<input type="range" name="borderOffTime" min="0" max="99"/>Flash - off for
+		<br/>
+		<input type="radio" name="elType" value="1" checked>On
+		<br/>
+		<input type="radio" name="elType" value="0" checked>Off
+		<br/>
+		<input type="radio" name="elType" value="2" checked>Flash slow
+		<br/>
+		<input type="radio" name="elType" value="3" checked>Flash fast
+		<br/>
+		</form>
+		<button onclick="send()">SEND<button>
+	</body>
+</html>
