@@ -31,19 +31,15 @@ function send() {
 function getData() {
 	var controls = $("#controls");
 	
-	var person = controls.person.value;
+	var ushpiz = controls.ushpiz.value;
 	var borderType = controls.borderType.value;
 	var borderOnTime = controls.borderOnTime.value;
 	var borderOffTime = controls.borderOffTime.value;
 	var elType = controls.elType.value;
+	var elOnTime = controls.elOnTime.value;
+	var elOffTime = controls.elOffTime.value;
 	
-	var data = "p"+person+"b"+borderType+"s"+pad(borderOnTime,2)+"h"+pad(borderOffTime,2)+"e"+elType;
+	var data = "u"+ushpiz+"s"+borderOnTime+"h"+borderOffTime+"b"+borderType+"e"+elType+"S"+elOnTime+"H"+elOffTime+"X";;
 	alert(data);
 	return data;
-}
-
-function pad(n, width, z) {
-  z = z || '0';
-  n = n + '';
-  return n.length >= width ? n : new Array(width - n.length + 1).join(z) + n;
 }

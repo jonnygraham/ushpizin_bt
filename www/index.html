@@ -13,36 +13,40 @@
 	<br/>
 	<br/>
 	<form id="controls">
-			<input type="radio" name="person" value="1" checked>Avraham
+		<h2>Ushpizin</h2>
+			<input type="radio" name="ushpiz" value="1" checked>Avraham
 			<br/>
-			<input type="radio" name="person" value="2">Yitzchak<br/>
-			<input type="radio" name="person" value="3">Yaakov<br/>
-			<input type="radio" name="person" value="4">Moshe<br/>
-			<input type="radio" name="person" value="5">Aharon<br/>
-			<input type="radio" name="person" value="6">Yosef<br/>
-			<input type="radio" name="person" value="7">David<br/>
+			<input type="radio" name="ushpiz" value="2">Yitzchak<br/>
+			<input type="radio" name="ushpiz" value="3">Yaakov<br/>
+			<input type="radio" name="ushpiz" value="4">Moshe<br/>
+			<input type="radio" name="ushpiz" value="5">Aharon<br/>
+			<input type="radio" name="ushpiz" value="6">Yosef<br/>
+			<input type="radio" name="ushpiz" value="7">David<br/>
 		
 		<br/>
+		<h2>Border</h2>
 		<input type="radio" name="borderType" value="1" checked>On
 		<br/>
 		<input type="radio" name="borderType" value="0">Off
 		<br/>
 		<input type="radio" name="borderType" value="2">Flash
 		<br/>
-		
-		<input type="range" name="borderOnTime" min="0" max="99"/>Flash - on for
+		Flash - on for <input type="range" name="borderOnTime" min="500" max="10000"/>
 		<br/>
-		<input type="range" name="borderOffTime" min="0" max="99"/>Flash - off for
+		Flash - off for <input type="range" name="borderOffTime" min="500" max="10000"/>
 		<br/>
+		<h2>Blue wire</h2>
 		<input type="radio" name="elType" value="1" checked>On
 		<br/>
 		<input type="radio" name="elType" value="0" checked>Off
 		<br/>
 		<input type="radio" name="elType" value="2" checked>Flash slow
 		<br/>
-		<input type="radio" name="elType" value="3" checked>Flash fast
+		Flash - on for <input type="range" name="elOnTime" min="500" max="10000"/>
+		<br/>
+		Flash - off for <input type="range" name="elOffTime" min="500" max="10000"/>
 		<br/>
 		</form>
-		<button onclick="send()">SEND<button>
+		<button onclick="send()">SEND</button>
 	</body>
 </html>
