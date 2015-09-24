@@ -29,15 +29,14 @@ function send() {
 }
 
 function getData() {
-	var controls = $("#controls")[0];
-	
-	var ushpiz = controls.ushpiz.value;
-	var borderType = controls.borderType.value;
-	var borderOnTime = controls.borderOnTime.value;
-	var borderOffTime = controls.borderOffTime.value;
-	var elType = controls.elType.value;
-	var elOnTime = controls.elOnTime.value;
-	var elOffTime = controls.elOffTime.value;
+
+	var ushpiz = $('input[name="ushpiz"]:checked').val();
+	var borderType = $('input[name="borderType"]:checked').val();
+	var borderOnTime = $('input[name="borderOnTime"]').val();
+	var borderOffTime = $('input[name="borderOffTime"]').val();
+	var elType = $('input[name="elType"]:checked').val();
+	var elOnTime = $('input[name="elOnTime"]').val();
+	var elOffTime = $('input[name="elOffTime"]').val();
 	
 	var data = "u"+ushpiz+"s"+borderOnTime+"h"+borderOffTime+"b"+borderType+"S"+elOnTime+"H"+elOffTime+"e"+elType+"X";;
 	alert(data);
