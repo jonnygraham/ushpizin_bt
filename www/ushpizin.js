@@ -29,7 +29,7 @@ function send() {
 }
 
 function getData() {
-	var controls = $("#controls");
+	var controls = $("#controls")[0];
 	
 	var ushpiz = controls.ushpiz.value;
 	var borderType = controls.borderType.value;
@@ -39,7 +39,7 @@ function getData() {
 	var elOnTime = controls.elOnTime.value;
 	var elOffTime = controls.elOffTime.value;
 	
-	var data = "u"+ushpiz+"s"+borderOnTime+"h"+borderOffTime+"b"+borderType+"e"+elType+"S"+elOnTime+"H"+elOffTime+"X";;
+	var data = "u"+ushpiz+"s"+borderOnTime+"h"+borderOffTime+"b"+borderType+"S"+elOnTime+"H"+elOffTime+"e"+elType+"X";;
 	alert(data);
 	return data;
 }
