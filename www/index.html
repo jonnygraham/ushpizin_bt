@@ -8,6 +8,7 @@
 		<script src="ushpizin.js"/></script>
 	</head>
 	<body>
+	<h1>Ushpizin Controller</h1>
 		<button onclick="connect()">Connect</button><span id="connState">Click to connect</span>
 
 	<br/>
@@ -35,18 +36,7 @@
 		<br/>
 		Flash - off for <input type="range" name="borderOffTime" min="500" max="10000"/>
 		<br/>
-		<h2>Blue wire</h2>
-		<input type="radio" name="elType" value="1" checked>On
-		<br/>
-		<input type="radio" name="elType" value="0" checked>Off
-		<br/>
-		<input type="radio" name="elType" value="2" checked>Flash slow
-		<br/>
-		Flash - on for <input type="range" name="elOnTime" min="500" max="10000"/>
-		<br/>
-		Flash - off for <input type="range" name="elOffTime" min="500" max="10000"/>
-		<br/>
-		</form>
-		<button onclick="send()">SEND</button>
+	</form>
+	<button onclick="send()">SEND</button>
 	</body>
 </html>

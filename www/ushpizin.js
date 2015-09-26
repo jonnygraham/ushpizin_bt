@@ -1,9 +1,10 @@
 var connected = false;
 var btAddress = "20:15:06:01:27:93";
 function connect() {
+	$("#connState").text("Connnecting...");
 	bluetoothSerial.isConnected(function connected() {
 			connected = false;
-			$("#connState").text("Disconnected");
+			$("#connState").text("Disconnected. Click to connect");
 		}, function disconnected() {
 			bluetoothSerial.connect(btAddress,
 				function connectSuccess() {
@@ -23,7 +24,8 @@ function send() {
 		bluetoothSerial.write(getData());
 	}, function failure() {
 		connected = false;
-		$("#connState").text("Disconnected");
+		alert("Not connected!");
+		$("#connState").text("Click to connect");
 		}
 	);
 }
@@ -34,11 +36,8 @@ function getData() {
 	var borderType = $('input[name="borderType"]:checked').val();
 	var borderOnTime = $('input[name="borderOnTime"]').val();
 	var borderOffTime = $('input[name="borderOffTime"]').val();
-	var elType = $('input[name="elType"]:checked').val();
-	var elOnTime = $('input[name="elOnTime"]').val();
-	var elOffTime = $('input[name="elOffTime"]').val();
+
 	
-	var data = "u"+ushpiz+"s"+borderOnTime+"h"+borderOffTime+"b"+borderType+"S"+elOnTime+"H"+elOffTime+"e"+elType+"X";;
-	alert(data);
+	var data = "u"+ushpiz+"s"+borderOnTime+"h"+borderOffTime+"b"+borderType+"X";
 	return data;
 }
