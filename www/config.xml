@@ -33,7 +33,7 @@
     <!-- Customize your app and platform with the preference element. -->
     <preference name="phonegap-version"           value="3.6.3" />          <!-- all: current version of PhoneGap -->
     <preference name="orientation"                value="portrait" />        <!-- all: default means both landscape and portrait are enabled -->
-    <preference name="target-device"              value="universal" />      <!-- all: possible values handset, tablet, or universal -->
+    <preference name="target-device"              value="handset" />      <!-- all: possible values handset, tablet, or universal -->
     <preference name="fullscreen"                 value="false" />           <!-- all: hides the status bar at the top of the screen -->
     <preference name="webviewbounce"              value="true" />           <!-- ios: control whether the screen 'bounces' when scrolled beyond the top -->
     <preference name="prerendered-icon"           value="true" />           <!-- ios: if icon is prerendered, iOS will not apply it's gloss to the app's icon on the user's home screen -->
@@ -54,7 +54,7 @@
         <gap:plugin name="Example" />
         A list of available plugins are available at https://build.phonegap.com/docs/plugins
     -->
-	<gap:plugin name="com.megster.cordova.bluetoothserial" version="0.2.2" />
+	<plugin name="com.megster.cordova.bluetoothserial" spec="0.3.3" source="pgb" />
 <!--	<gap:plugin name="com.phonegap.plugin.statusbar" >
 		<param name="StatusBarOverlaysWebView" value="false" />
 	</gap:plugin>
